@@ -28,3 +28,15 @@ cd Transactions
 Luego Ejecuta el make file
 ```bash
 make run
+```
+# EndPoints
+## POST: transactions
+Este endpoint necesita:
+- Un archivo csv como el siguiente:
+- ![image](https://github.com/user-attachments/assets/f01b0894-9baf-4467-b48f-467338808b86)
+- Y el correo de la persona a la cual se le quiere enviar el correo y su identificacion
+![image](https://github.com/user-attachments/assets/8a39a225-ff28-42ff-9a95-507e959af3ae)
+
+## GET: user/transactions/{id}
+-Este endpoint necesita el id de la persona que registro sus transacciones previamente
+![image](https://github.com/user-attachments/assets/c0f42be2-4f97-4aad-bf30-91744e710c93)
