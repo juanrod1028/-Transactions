@@ -1,42 +1,43 @@
 # Go REST API Application
 
-## Introducción
+## Introduction
 
-Esta aplicación es un servidor API REST construido con Go (Golang) que gestiona usuarios y transacciones financieras. Permite a los usuarios cargar transacciones a través de archivos CSV, almacenar datos en una base de datos PostgreSQL, y generar resúmenes de transacciones para enviar por correo electrónico. La aplicación está diseñada para ser modular y extensible.
+This application is a REST API server built with Go (Golang) that manages users and financial transactions. It allows users to upload transactions via CSV files, store data in a PostgreSQL database, and generate transaction summaries to be sent via email. The application is designed to be modular and extensible.
 
-## Características
+## Features
 
-- **Carga de Transacciones**: Permite a los usuarios cargar transacciones a través de archivos CSV.
-- **Gestión de Usuarios**: Guarda la información del usuario en una base de datos PostgreSQL.
-- **Generación de Resúmenes**: Calcula resúmenes de transacciones y envía informes por correo electrónico.
+- **Transaction Upload**: Allows users to upload transactions via CSV files.
+- **User Management**: Stores user information in a PostgreSQL database.
+- **Summary Generation**: Calculates transaction summaries and sends reports via email.
 
-## Requisitos
+## Requirements
 
-- **Go**: Esta aplicación está construida con Go 1.22.3. Asegúrate de tener Go instalado si deseas ejecutar el código directamente.
+- **Go**: This application is built with Go 1.22.3. Make sure you have Go installed if you want to run the code directly.
 
-### Clonar el Repositorio
+## Installation
 
-Primero, clona el repositorio:
+### Clone the Repository
+
+First, clone the repository:
 
 ```bash
 git clone https://github.com/juanrod1028/Transactions
 cd Transactions
 ```
-- En el archivo main.go deveras reemplazar los campos vacios de ´COMPANY_EMAIL´ y ´COMPANY_EMAIL_PASS´
-- Tambien deberas ajustar el host, port, user, password y bdname para hacer la conexion con postgres
-
-Luego Ejecuta el make file
+- In the main.go file, replace the empty fields for COMPANY_EMAIL and COMPANY_EMAIL_PASS.
+- Adjust the host, port, user, password, and dbname settings to connect to PostgreSQL.
+Then, run the make file:
 ```bash
 make run
 ```
 # EndPoints
 ## POST: transactions
-Este endpoint necesita:
-- Un archivo csv como el siguiente:
+This endpoint requires:
+- A CSV file like the following
 - ![image](https://github.com/user-attachments/assets/f01b0894-9baf-4467-b48f-467338808b86)
-- Y el correo de la persona a la cual se le quiere enviar el correo y su identificacion
+- The email of the person to whom the email will be sent and their identification.
 ![image](https://github.com/user-attachments/assets/8a39a225-ff28-42ff-9a95-507e959af3ae)
 
 ## GET: user/transactions/{id}
--Este endpoint necesita el id de la persona que registro sus transacciones previamente
+-This endpoint requires the ID of the person who previously registered their transactions.
 ![image](https://github.com/user-attachments/assets/c0f42be2-4f97-4aad-bf30-91744e710c93)
